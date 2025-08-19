@@ -5,8 +5,8 @@
     font-family: 'Open Sans', sans-serif, 'Encoded sans', 'Encoded Sans Condensed';
 }
 
-body{
-  max-width: 100vw;
+html, body {
+    max-width: 100%;
     background-color: #ffffff;
     overflow-x: hidden;
 }
@@ -871,13 +871,15 @@ body{
 .deliver {
   flex-direction: column;
   gap: 32px;
-  padding-left: 18px;
-  align-items: stretch
+  padding-left: 4%;
+  align-items: flex-start;
 }
 
 .home{
     flex-direction: column;
-    align-items: left;
+    align-items: flex-start;
+    padding-right: 4%;
+    padding-left: 4%;
     padding: 5px 0 0 3%;
 }
 
@@ -896,7 +898,7 @@ body{
 } 
 
 .home-text h1 {
-    font-size: 46px;
+    font-size: 40px;
     font-weight: 700;
   }
 
@@ -907,21 +909,21 @@ body{
 
   .image-containers {
     margin-top: 2%;
+    width: 100%;
+    max-width: 100%;
+    justify-content: center;
   }
 
   .image-containers img {
     max-width: 100%;
     width: 100%;
-    height: auto;
-    display: block;
-    transform: translateX(0);
+    transform: none
   }
 
   .wave-bottom {
     margin-top: -22vw;   /* Move wave up more (try -18vw or adjust as needed) */
-    height: 22vw;        /* Make wave taller (adjust for your design) */
-    width: 100vw;
-    overflow: hidden;
+    height: 20vw;        /* Make wave taller (adjust for your design) */
+    /* overflow: hidden; */
   }
   .wave-bottom svg {
     height: 100%;
@@ -936,7 +938,7 @@ body{
   }
 
   .why-us .top h2{
-    font-size: 32px;
+    font-size: 28px;
   }
 
 .desk-us { 
@@ -965,11 +967,18 @@ body{
     align-items: center;
 }
 
-  .paint-job, .main-img, .overlay-img {
+.paint-job, .main-img, .overlay-img {
     width: 100%;
-    max-width: none;
+    max-width: 100%;
     margin: 0;
   }
+
+.overlay-img {
+  margin-top: -40px; 
+  margin-left: 50%; 
+  width: 90%; 
+  max-width: 420px; 
+}
 
   .deliver > div {
     flex-direction: column;
@@ -981,4 +990,16 @@ body{
     justify-content: center;
     align-items: center;
   }
+}
+
+@media screen and (max-width: 768px) {
+.home,
+.about-us,
+.service-cards,
+.deliver {
+  flex-direction: column;
+  gap: 32px;
+  padding-left: 18px;
+  align-items: stretch;
+}
 }
