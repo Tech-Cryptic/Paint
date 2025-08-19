@@ -8,6 +8,7 @@
 html, body {
     max-width: 100%;
     background-color: #ffffff;
+    outline: 5px solid red;
     overflow-x: hidden;
 }
 
@@ -1002,4 +1003,16 @@ html, body {
   padding-left: 18px;
   align-items: stretch;
 }
+
+.deliver > div {
+    min-width: 0;
+    width: 100%;
+}
+
+.image-containers img,
+.main-img,
+.overlay-img {
+    max-width: 100%;
+    width: 100%;
+  }
 }
